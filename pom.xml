@@ -21,6 +21,7 @@
         <local.scm.svn.host>172.10.10.110</local.scm.svn.host>
         <local.scm.svn.port>8081</local.scm.svn.port>
         <springframework.version>4.1.3.RELEASE</springframework.version>
+        <logback.version>1.0.13</logback.version>
     </properties>
 
     <repositories>
@@ -161,6 +162,18 @@
             <version>${play.version}</version>
             <scope>provided</scope>
         </dependency>
+        <!-- akka -->
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor_2.11</artifactId>
+            <version>2.3.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId> akka-testkit_2.11</artifactId>
+            <version>2.3.9</version>
+            <!--<scope>test</scope>-->
+        </dependency>
 
         <!--spring mvc-->
         <dependency>
@@ -198,7 +211,7 @@
         <dependency>
             <groupId>net.debasishg</groupId>
             <artifactId>redisclient_2.11</artifactId>
-            <version>2.13</version>
+            <version>2.15</version>
         </dependency>
         <dependency>
             <groupId>org.scala-lang</groupId>
@@ -226,17 +239,29 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.1</version>
         </dependency>
-        <!--dajie-->
+        <!--slick-->
+        <dependency>
+            <groupId>com.typesafe.slick</groupId>
+            <artifactId>slick_2.11</artifactId>
+            <version>2.1.0</version>
+        </dependency>
         <!--<dependency>-->
-        <!--<groupId>org.codehaus.jackson</groupId>-->
-        <!--<artifactId>jackson-all</artifactId>-->
-        <!--<version>2.5.0</version>-->
+            <!--<groupId>com.typesafe.slick</groupId>-->
+            <!--<artifactId>slick-codegen_2.11</artifactId>-->
+            <!--<version>2.1.0-RC3</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-        <!--<groupId>org.codehaus.jackson</groupId>-->
-        <!--<artifactId>jackson-mapper-asl</artifactId>-->
-        <!--<version>1.9.13</version>-->
+            <!--<groupId>org.slf4j</groupId>-->
+            <!--<artifactId>slf4j-nop</artifactId>-->
+            <!--<version>1.6.4</version>-->
         <!--</dependency>-->
+        <!--mysql-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.6</version>
+        </dependency>
+        <!--jackson-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
@@ -252,6 +277,17 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.5.1</version>
         </dependency>
+        <!--logback-->
+        <!--<dependency>-->
+            <!--<groupId>ch.qos.logback</groupId>-->
+            <!--<artifactId>logback-core</artifactId>-->
+            <!--<version>${logback.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>ch.qos.logback</groupId>-->
+            <!--<artifactId>logback-classic</artifactId>-->
+            <!--<version>${logback.version}</version>-->
+        <!--</dependency>-->
     </dependencies>
 
 </project>
