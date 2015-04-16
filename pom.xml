@@ -65,27 +65,38 @@
             </properties>
         </profile>
         <profile>
-            <id>product</id>
-            <properties>
-                <project.environment>product</project.environment>
-            </properties>
-        </profile>
-        <profile>
             <id>test</id>
             <properties>
                 <project.environment>test</project.environment>
             </properties>
         </profile>
+        <profile>
+            <id>preview</id>
+            <properties>
+                <project.environment>preview</project.environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>product</id>
+            <properties>
+                <project.environment>product</project.environment>
+            </properties>
+        </profile>
     </profiles>
+
 
     <build>
         <finalName>${project.artifactId}</finalName>
+        <filters>
+            <filter>${project.basedir}/filters/filter_${project.environment}.properties</filter>
+        </filters>
         <!-- Play source directory -->
         <sourceDirectory>${project.basedir}/app</sourceDirectory>
         <testSourceDirectory>${project.basedir}/test</testSourceDirectory>
         <resources>
             <resource>
                 <directory>${project.basedir}/conf</directory>
+                <filtering>true</filtering>
             </resource>
             <resource>
                 <directory>${basedir}</directory>
