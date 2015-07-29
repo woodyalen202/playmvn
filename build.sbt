@@ -1,4 +1,4 @@
-name := """woodyalen202"""
+name := """playmvn"""
 
 version := "1.0.1-SNAPSHOT"
 
